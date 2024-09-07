@@ -5,9 +5,9 @@ var myImage = document.querySelector("img");
 myImage.onclick = function () {
   var mySrc = myImage.getAttribute("src");
   if (mySrc === "../images/tex2.png") {
-    myImage.setAttribute("src", "../images/tex1.png");
+    myImage.setAttribute("src", "images/tex1.png");
   } else {
-    myImage.setAttribute("src", "../images/tex2.png");
+    myImage.setAttribute("src", "images/tex2.png");
   }
 };
 
