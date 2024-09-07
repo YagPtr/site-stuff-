@@ -28,7 +28,7 @@ if (!localStorage.getItem("name")) {
   setUserName();
 } else {
   var storedName = localStorage.getItem("name");
-  if (storedName=="null")
+  if (storedName=="null"||storedName=="")
     myHeading.textContent = "Ты ничего не ввел  ";
   else 
     myHeading.textContent = "Ты ввел  " + storedName;
