@@ -18,7 +18,7 @@ var myHeading = document.querySelector("h1");
 function setUserName() {
   var myName = prompt("Введи что-то");
   localStorage.setItem("name", myName);
-  if (myName==null)
+  if (myName==null||myName=="")
     myHeading.textContent = "Ты ничего не ввел  ";
   else 
     myHeading.textContent = "Ты ввел  " + myName;
