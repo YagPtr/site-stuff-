@@ -96,6 +96,9 @@ myResetButton.onclick = function () {
 if (localStorage.getItem("bodyPressed")) {
   document.querySelector("#bonus").setAttribute("src", "images/4x.webp");
   document.querySelector("#bonustext").textContent="Смешной кот";
+} else {
+  document.querySelector("#bonus").setAttribute("src", "");
+  document.querySelector("#bonustext").textContent="";
 }
 
 
