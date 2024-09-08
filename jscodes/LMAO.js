@@ -3,5 +3,6 @@
 var myResetButton = document.querySelector("#nocat")
 
 myResetButton.onclick = function () {
-    localStorage.removeItem("bodyPressed")
+
+    localStorage.setItem("bodyPressed", "dead")
 }
