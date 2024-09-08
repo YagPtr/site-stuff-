@@ -49,7 +49,7 @@ document.querySelector("#whate").onclick=function(){
 
 
 document.querySelector("body").onclick=function(){
-  if (!(localStorage.getItem("bodyPressed")=="dead")) {
+  if ((localStorage.getItem("bodyPressed")!="dead")) {
   localStorage.setItem("bodyPressed", "yes")
   var myLMAOImage = document.querySelector("#bonus");
   myLMAOImage.setAttribute("src", "images/4x.webp");
