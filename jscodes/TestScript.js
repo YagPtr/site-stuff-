@@ -1,5 +1,5 @@
 "use strict"
-
+while (true) {
 var myImage = document.querySelector("img");
 
 myImage.onclick = function () {
@@ -128,5 +128,5 @@ myButton.onclick = function () {
   setUserName();
 };
 
-
+}
 
