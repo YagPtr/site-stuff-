@@ -84,13 +84,12 @@ myResetButton.onclick = function () {
   localStorage.removeItem("pressed?")
   localStorage.removeItem("mpeiPressed")
   document.querySelector("#nya").textContent=""
-  document.querySelector("#bonus").setAttribute("src", "");
-  document.querySelector("#bonustext").textContent="";
+if  (localStorage.getItem("bodyPressed")!="dead"){
   if (document.querySelector("#reset").textContent=="Вернуть как было"+" смешной кот остается")
     document.querySelector("#reset").textContent+=" найди как от него избавиться";
   if (document.querySelector("#reset").textContent=="Вернуть как было")
     document.querySelector("#reset").textContent+=" смешной кот остается";
-  
+} else  document.querySelector("#reset").textContent="как прежде уже не будет"
   xd();
 };
 
