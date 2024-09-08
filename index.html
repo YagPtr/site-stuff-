@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="ru"></html>
-<html>
+<html lang="ru">
+
   <head>
     <link href="styles/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
@@ -14,17 +14,28 @@
   </head>
   <body>
     <h1>Этого не должно быть видно</h1>
-    <p >Блин <strong>ОБОЖАЮ</strong> <a href="https://www.mpei.ru" target="_blank">НИУ МЭИ</a></p>
+    <p >Блин <strong>ОБОЖАЮ</strong> <a id="mpei" href="https://www.mpei.ru" target="_blank">НИУ МЭИ</a></p>
     
-    <span style="font-size: 32px; margin: 20px 20px;">Это заголовок верхнего уровня?</span>
+    <span id="whate" style="font-size: 32px; margin: 20px 20px;">Это заголовок верхнего уровня?</span>
     <p>
-       <a href="file.html#Link">Другая страница, переход по метке</a>.
+       <a id="link1" href="file.html#Link">Другая страница, переход по метке</a>
     </p>
-  
-<button>Изменить введенное</button>
+
+
+    
+
+<button id="button">Изменить введенное что-то</button>
+<p>немного текста чтобы между кнопками было расстояние </p>
+
+<button id="reset">Вернуть как было</button>
+<p id="nya"> </p>
 
     <img src="images/tex1.png" alt="Моё тестовое изображение" />
-    <a class="mail" href="mailto:criper294@gmail.com">Отправить мне письмо</a>
+    <a id="link2" class="mail" href="mailto:criper294@gmail.com">Отправить мне письмо</a>
+
+    <p id="bonustext"></p>
+    <img id="bonus"  style="transform: translate(-569px,0px);" />
+
     <script src="jscodes/TestScript.js"></script>
   </body>
   

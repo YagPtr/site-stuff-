@@ -12,7 +12,92 @@ myImage.onclick = function () {
 };
 
 
-var myButton = document.querySelector("button");
+function xd(){
+  if (localStorage.getItem("pressed?")=="yes"){
+  document.getElementById("whate").textContent="ответ - нет, как и ссылок на этой странице";
+  document.getElementById("link1").textContent="";
+  document.getElementById("link2").textContent="";
+  }
+  else if(localStorage.getItem("pressed?")=="twice"){
+    document.getElementById("whate").textContent="ладно верну ссылки";
+    document.getElementById("link1").textContent="Другая страница, переход по метке";
+    document.getElementById("link2").textContent="Отправить мне письмо";
+  }
+  else {
+    document.getElementById("whate").textContent="Это заголовок верхнего уровня?";
+    document.getElementById("link1").textContent="Другая страница, переход по метке";
+    document.getElementById("link2").textContent="Отправить мне письмо";
+  }
+
+ // document.getElementsByName("#a").textContent="xdd";
+  //document.getElementsByTagName("#a").textContent="xd";
+
+}
+
+
+document.querySelector("#whate").onclick=function(){
+
+  if (localStorage.getItem("pressed?")!="yes")
+    localStorage.setItem("pressed?", "yes")
+  else 
+    localStorage.setItem("pressed?", "twice")
+  
+  xd();
+
+}
+
+
+
+document.querySelector("body").onclick=function(){
+  localStorage.setItem("bodyPressed", "yes")
+  var myLMAOImage = document.querySelector("#bonus");
+  myLMAOImage.setAttribute("src", "images/4x.webp");
+  document.querySelector("#bonustext").textContent="Смешной кот";
+}
+
+
+
+
+document.querySelector("#mpei").onclick=function(){
+  localStorage.setItem("mpeiPressed", "yes")
+  document.querySelector("#nya").textContent="ЧИНАЗЕС ТЫ РЕАЛЬНО ПЕРЕШЁЛ ПО ССЫЛКЕ НА САЙТ МЭИ"
+}
+
+
+if (localStorage.getItem("mpeiPressed")){
+  document.querySelector("#nya").textContent="ЧИНАЗЕС ТЫ РЕАЛЬНО ПЕРЕШЁЛ ПО ССЫЛКЕ НА САЙТ МЭИ"
+}
+
+
+if (localStorage.getItem("pressed?")){
+  xd();
+ // document.getElementById("whate").textContent="ответ - нет";
+}
+
+var myResetButton = document.querySelector("#reset")
+
+myResetButton.onclick = function () {
+  localStorage.removeItem("pressed?")
+  localStorage.removeItem("mpeiPressed")
+  document.querySelector("#nya").textContent=""
+  document.querySelector("#bonus").setAttribute("src", "");
+  document.querySelector("#bonustext").textContent="";
+  if (document.querySelector("#reset").textContent=="Вернуть как было"+" смешной кот остается")
+    document.querySelector("#reset").textContent+=" найди как от него избавиться";
+  if (document.querySelector("#reset").textContent=="Вернуть как было")
+    document.querySelector("#reset").textContent+=" смешной кот остается";
+  
+  xd();
+};
+
+
+if (localStorage.getItem("bodyPressed")) {
+  document.querySelector("#bonus").setAttribute("src", "images/4x.webp");
+  document.querySelector("#bonustext").textContent="Смешной кот";
+}
+
+
+var myButton = document.querySelector("#button");
 var myHeading = document.querySelector("h1");
 
 function setUserName() {
