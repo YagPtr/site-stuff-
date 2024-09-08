@@ -1,5 +1,5 @@
 "use strict"
-while (true) {
+
 var myImage = document.querySelector("img");
 
 myImage.onclick = function () {
@@ -93,12 +93,15 @@ myResetButton.onclick = function () {
 };
 
 
-if (localStorage.getItem("bodyPressed")) {
+if (localStorage.getItem("bodyPressed")=="yes") {
   document.querySelector("#bonus").setAttribute("src", "images/4x.webp");
   document.querySelector("#bonustext").textContent="Смешной кот";
-} else {
+} else if (!localStorage.getItem("bodyPressed")){
   document.querySelector("#bonus").setAttribute("src", "");
   document.querySelector("#bonustext").textContent="";
+} else if  (localStorage.getItem("bodyPressed")=="dead"){
+document.querySelector("#bonus").setAttribute("src", "");
+  document.querySelector("#bonustext").textContent="его кровь на твоих руках";
 }
 
 
@@ -128,5 +131,5 @@ myButton.onclick = function () {
   setUserName();
 };
 
-}
+
 
