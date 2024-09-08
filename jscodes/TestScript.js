@@ -55,7 +55,9 @@ document.querySelector("body").onclick=function(){
   document.querySelector("#bonustext").textContent="Смешной кот";
 }
 
-
+document.querySelector("#useless").onclick=function(){
+  document.querySelector("#useless").textContent="тут реально ниче нет, я даже отдельную переменную для отрисовки этого прикола не буду делать и при обновлении оно пропадет"
+}
 
 
 document.querySelector("#mpei").onclick=function(){
