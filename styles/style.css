@@ -2,11 +2,38 @@ html {
     font-family: "Nerko One", cursive;
     font-weight: 400;
     font-style: normal;
-    background-color: #F9B2E7;
+   
+    background-image: url("D:\\JavaScriptProjects\\site-stuff-\\images\\DORA.png");
   }
   
 
+  aside {
+    background-color: rgba(255, 0, 212, 0.5);
+    flex: 1;
+    margin-left: 50%;
+    padding: 0.5%;
+  
+    
+  }
 
+
+  
+  img.bonus{
+    margin-left: 20%;
+  }
+
+  aside img{
+    margin-left: 25%;
+   
+  }
+  button{
+    background-color: hsla(0, 100%, 50%, 1);
+    margin-left: 5%;
+    
+  }
+  figcaption{
+    margin-left: 40%;
+  }
   h1 {
     font-size: 60px;
     text-align: center;
@@ -24,9 +51,10 @@ html {
   }
 
   body {
+    
     width: 600px;
     margin: 20px auto ;
-    background-color: #ff9500;
+    background-color: hsl(35, 100%, 50%,0.5);
     padding: 20px 20px 20px 20px;
     border: 5px solid black;
   }
