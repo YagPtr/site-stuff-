@@ -46,7 +46,14 @@ document.querySelector("#whate").onclick=function(){
 
 }
 
+const button = document.querySelector("#change-xd");
 
+button.addEventListener("click", updateName);
+
+function updateName() {
+  const name = prompt("Enter a new name");
+  button.textContent = `Player 1: ${name}`;
+}
 
 document.querySelector("body").onclick=function(){
   if ((localStorage.getItem("bodyPressed")!="dead")) {

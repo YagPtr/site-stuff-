@@ -16,6 +16,9 @@
     <main>
       <article>
     <h1>Этого не должно быть видно</h1>
+    <iframe src="https://yandex.ru/map-widget/v1/?ll=37.745875%2C55.787834&masstransit%5BlineId%5D=2037271374&masstransit%5BthreadId%5D=2037278521&mode=masstransit&tab=stops&z=21" 
+  width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">
+  </iframe>
     <p>Блин <strong>ОБОЖАЮ</strong> <a id="mpei" href="https://www.mpei.ru" target="_blank">НИУ МЭИ</a></p>
     
     <span id="whate" style="font-size: 32px; margin: 20px 20px;">Это заголовок верхнего уровня?</span>
@@ -38,6 +41,32 @@
     </figure>
   </aside>
   <button id="reset">Вернуть как было</button>
+  <button id="change-xd">типо имя</button>
+  
+</div>
+<svg width="100%" height="100%">
+  <rect width="100%" height="100%" fill="red" />
+  <circle cx="50%" cy="50%" r="60" fill="blue" stroke="black" />
+  <polygon points="10,0 200,50 10,120" fill="pink"/>
+  <text x="50" y="100" font-family="Verdana" font-size="55"
+        fill="white" stroke="black" stroke-width="2">
+          Hello!
+  </text>
+</svg>
+<script>document.addEventListener("DOMContentLoaded", function () {
+  function createParagraph() {
+    let para = document.createElement("p");
+    para.textContent = "You clicked the button!";
+    document.body.appendChild(para);
+  }
+
+  const buttons = document.querySelectorAll("button");
+
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", createParagraph);
+  }
+
+});</script>
 </main>
 
 
@@ -48,10 +77,11 @@
     <a id="link2" class="mail" href="mailto:criper294@gmail.com">Отправить мне письмо</a>
 
     <p id="bonustext"></p>
-    <img id="bonus" alt="LMAO"  class="bonus"   />
+    <img id="bonus"  class="bonus"   />
 
     <script src="jscodes/TestScript.js"></script>
     </footer>
+    
   </body>
   
 </html>
